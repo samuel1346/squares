@@ -7,10 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(-25%)' },
+          '50%': { transform: 'translateX(75%)' },
+        },
+        'custom-bounce': {
+          '0%, 100%': { transform: 'translateY(-50%)' },
+          '50%': { transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        bounce: 'bounce 1s infinite',
+        'custom-bounce': 'custom-bounce 2s infinite',
       },
     },
   },
