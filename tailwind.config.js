@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        blue: {
+          800: '#1C4DBE',
+          900: '#0D2566',
+        },
+        yellow: {
+          900: '#5F4B3B',
+        },
+      },
       keyframes: {
         bounce: {
           '0%, 100%': { transform: 'translateY(-25%)' },

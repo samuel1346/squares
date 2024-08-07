@@ -23,3 +23,10 @@
     text-wrap: balance;
   }
 }
+
+.card-background {
+  background-image: url('/images/textureTwo.jpg');
+  background-size: cover;
+  background-blend-mode: darken;
+  opacity: 0.5;
+}
