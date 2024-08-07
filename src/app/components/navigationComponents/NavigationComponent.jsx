@@ -3,7 +3,6 @@ import data from '@/app/data/data';
 import Link from 'next/link';
 
 const NavigationComponent = () => {
-  // Crear un conjunto para almacenar categorías únicas
   const uniqueCategories = Array.from(new Set(data.map(i => i.category)));
 
   return (
