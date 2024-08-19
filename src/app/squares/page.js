@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemsComponents from '../components/itemComponents/ItemsComponents'
 
-const page = () => {
+const page =() => {
   return (
     <>
       <ItemsComponents/>

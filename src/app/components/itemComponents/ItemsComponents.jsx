@@ -1,15 +1,18 @@
-'use client';
-
 import React from 'react';
-import data from '@/app/data/data';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const ItemsComponents = () => {
+const ItemsComponents = async () => {
+  const data = await fetch(`http://localhost:3000/API/products`,{
+    cache: 'no-store'
+  }).then(r=>r.json()).catch(e=>console.error('HTTP error! status: 404', e)
+  );
   return (
     <div className="flex flex-wrap flex-row justify-center md:justify-start align-middle m-2">
       {data?.map((i) => (
-        <div className="relative max-w-xs mx-auto bg-blue-800 border-2 border-blue-900 rounded-lg shadow-lg overflow-hidden my-4">
+        <div 
+        key={i.id}
+        className="relative max-w-xs mx-auto bg-blue-800 border-2 border-blue-900 rounded-lg shadow-lg overflow-hidden my-4">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/textures/textureTwo.jpg')" }}></div>
           <div className="relative text-center text-white font-bold text-xl mt-2">
           {i.name}
