@@ -6,26 +6,14 @@ import {setBtn} from '../../../../store/btnSlice/btnSlice';
 import dropDownFunction from './dropDownFunction';
 
 
+
 const BtnComponent = ({btnName, btnIcon}) => {
   const dispatch = useDispatch();
   const buttonName = useSelector(state=> state.btn.buttonName);
   const buttonState = useSelector(state=> state.btn.buttonState);
   const [state, setState] = useState(true);
   const btnRef = useRef(null);
-/*  const handleClickOutside = (event) => {
-      if (btnRef.current && !btnRef.current.contains(event.target)) {
-        dispatch(setBtn({buttonName: ''}))
-        console.log(buttonName, btnRef.current, btnRef.current.contains(event.target))
-        }
-  };
 
-  useEffect(() => {
-      document.addEventListener('click', handleClickOutside);
-      return () => {
-          document.removeEventListener('click', handleClickOutside);
-      };
-  }, []);
-*/
 
   const handleDispatch = ()=>{
     btnFunction(state, setState, btnName)
@@ -33,6 +21,7 @@ const BtnComponent = ({btnName, btnIcon}) => {
   }
 
   return (
+    <>
     <button 
     onClick={handleDispatch}
     ref={btnRef}
@@ -40,6 +29,7 @@ const BtnComponent = ({btnName, btnIcon}) => {
     >
       {btnIcon}
     </button>
+    </>
   )
 }
 
