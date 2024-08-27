@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ItemsComponents = async () => {
   const data = await fetch(`http://localhost:3000/API/products`,{
-    cache: 'no-store'
+    
   }).then(r=>r.json()).catch(e=>console.error('HTTP error! status: 404', e)
   );
   const Data = data[0].data

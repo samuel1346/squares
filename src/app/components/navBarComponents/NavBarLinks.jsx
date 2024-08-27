@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faSquare } from '@fortawesome/free-regular-svg-icons'
 import Link from 'next/link'
+import CarLengthComponent from '../carComponents/CarLengthComponent'
 
 
 const NavBarLinks = () => {
@@ -32,6 +33,7 @@ const NavBarLinks = () => {
         </Link>
         <Link href="/mySquareCart">
           {cart}
+          <CarLengthComponent/>
         </Link>
       </div>
       <div className='absolute right-2 top-2'>
