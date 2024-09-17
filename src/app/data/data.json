@@ -1,0 +1,72 @@
+[{
+    "id": 1,
+    "name": "Tetrax el Infernal",
+    "category": "ancient",
+    "img" :"/images/squareOne.png",
+    "description": "Roca viviente forjada en los abismos. Sus sombras invocan miedo en los corazones más valientes.",
+    "price": "1"
+},
+{
+    "id": 2,
+    "name": "Arkaos el Vengador",
+    "category": "ancient",
+    "img" : "/images/squareTwo.png",
+    "description": "Un ser de metal encantado con símbolos divinos. Se mueve silencioso, destruyendo a aquellos que desobedecen las leyes del universo.",
+    "price": "1"
+},
+{
+    "id": 3,
+    "name": "Doren, el falso cielo",
+    "category": "ancient",
+    "img" : "/images/squareThree.png",
+    "description": "Forjado en las profundidades del inframundo, su cuerpo cristalino vibra con la ira de los condenados",
+    "price": "1"
+},
+{
+    "id": 4,
+    "name": "El falso ocaso",
+    "category": "divine",
+    "img" : "/images/squareFour.png",
+    "description": "Dicen que fue una broma hecha por un dios rencoroso, atrae a los olvidados por la fe a una muerte irremediable",
+    "price": "1"
+},
+{
+    "id": 5,
+    "name": "Hernandez",
+    "category": "divine",
+    "img" : "/images/squareFive.png",
+    "description": "Hernandez, un tipaso",
+    "price": "1"
+},
+{
+    "id": 6,
+    "name": "Kubrak el Anciano",
+    "category": "mitical",
+    "img" : "/images/squareSix.png",
+    "description": "Un ser tallado en piedra ancestral, portador de sabiduría olvidada. Sus grietas emiten un brillo que revela secretos perdidos en el tiempo",
+    "price": "1"
+},
+{
+    "id": 7,
+    "name": "La gran puerta",
+    "category": "mitical",
+    "img" : "/images/squareSeven.png",
+    "description": "Una bestia creo este portal para invocar un horror inenarrable en nuestras tierras, se pueden escuchar susurros de agonia en sus grietas",
+    "price": "1"
+},
+{
+    "id": 8,
+    "name": "Serkath, Guardián Divino",
+    "category": "beast",
+    "img" : "/images/squareEight.png",
+    "description": "Una entidad cristalina irradiando luz celestial. Se dice que protege los misterios de los dioses y aniquila a quienes intentan revelarlos",
+    "price": "1"
+},
+{
+    "id": 9,
+    "name": "El gran Arco",
+    "category": "fallen",
+    "img" : "/images/squareNine.png",
+    "description": "Artefacto de guerra de una civilizacion olvidada, leyendas cuentan que se trata de el Armagedon ",
+    "price": "1"
+}]

@@ -1,9 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import AddToCarBtnComponent from '../btnComponents/AddToCarBtnComponent';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquare } from '@fortawesome/free-regular-svg-icons'
 
 const ItemDetailsComponent = async({params}) => {
   const {id} = params;
+  const square = <FontAwesomeIcon icon={faSquare} className='h-4 w-4 pt-1'/>
 
   const data = await fetch(`http://localhost:3000/API/products/id/${id}`, {
     cache: 'no-store',
@@ -25,12 +28,15 @@ const ItemDetailsComponent = async({params}) => {
           />
       </div>
       <div className="relative mt-2 mx-2 text-white  bg-zinc-600 opacity-75">
-        <p className="mt-2 text-sm border-2 border-zinc-900 p-2">
+        <p className="mt-2 text-sm border-2 border-zinc-900 p-2 rounded-md">
           {data.description}
         </p>
       </div>
-      <div className="relative text-center text-white text-sm mt-2 mb-2">
+      <div className="relative text-center text-white text-sm mt-2 mb-2 border-2 border-zinc-200/25 m-2 bg-zinc-900/50 rounded-md ">
       {data.category}
+      </div>
+      <div className="relative text-center w-10  text-white text-sm my-2 border-2 border-zinc-200/25 m-2 bg-zinc-900/75 rounded-md ">
+        {data.price} {square}
       </div>
       <AddToCarBtnComponent data={data}/>
     </div>

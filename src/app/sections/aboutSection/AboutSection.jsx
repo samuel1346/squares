@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="about-us-container p-6 bg-gray-100 rounded-lg shadow-md">
+    <div className="about-us-container m-2 p-6 bg-gray-100/50 rounded-lg shadow-md">
       <h2 className="text-3xl font-bold mb-4">About Us</h2>
       <p className="mb-4">
         Welcome to Square Shop, your one-stop destination for all things square! At Square Shop, we believe that squares are more than just shapes—they're a lifestyle. From perfectly symmetrical designs to their versatile functionality, squares hold a special place in our hearts.

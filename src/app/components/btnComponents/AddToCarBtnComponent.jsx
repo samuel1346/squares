@@ -19,6 +19,7 @@ const AddToCarBtnComponent = ({data}) => {
     }
     const handleDispatch = ()=>{
         dispatch(setCar({ data, quantity: num }))
+        alert('added to car')
     }
   return (
     <div className='flex flex-row m-2 p-2 justify-center *:px-2 

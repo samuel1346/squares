@@ -1,8 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquare } from '@fortawesome/free-regular-svg-icons'
 
 const ItemCategoryComponent = async ({params}) => {
+  const square = <FontAwesomeIcon icon={faSquare} className='h-4 w-4 pt-1'/>
   const {category} = params;
 
   const data = await fetch(`http://localhost:3000/API/products/${category}`, {
@@ -34,8 +37,11 @@ const ItemCategoryComponent = async ({params}) => {
               {i.description}
             </p>
           </div>
-          <div className="relative text-center text-white text-sm mt-2 mb-2">
+          <div className="relative text-center text-white text-sm mt-2 mb-2 border-2 border-zinc-200/25 m-2 bg-zinc-900/75 rounded-md">
           {i.category}
+          </div>
+          <div className="relative text-center w-10  text-white text-sm my-2 border-2 border-zinc-200/25 m-2 bg-zinc-900/75 rounded-md ">
+            {i.price} {square}
           </div>
         </Link>
         </div>

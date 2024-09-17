@@ -16,10 +16,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Providers>
-        <body className={inter.className}>
+        <body className={`${inter.className} bg-cover`} style={{ backgroundImage: "url('/textures/textureTwo.jpg')"}}>
           <NavBar/>
           <Header/>
-          {children}
+          <div
+          >
+            {children}
+          </div>
         </body>
       </Providers>
     </html>

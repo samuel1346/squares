@@ -11,8 +11,8 @@ const Header = () => {
     <h1 className='absolute z-auto text-zinc-200 inset-x-28 inset-y-24 md:inset-x-80 h-fit'>
       squares squares squares
     </h1>
-    <div className='flex flex-row mt-10 *:-z-50 '>
-      <div className='bg-zinc-900 w-screen overflow-hidden h-48 flex flex-row *:animate-bounce'>
+    <div className='flex flex-row mt-12 mx-2 *:-z-50 bg-zinc-900/75 shadow-inner rounded-lg border-2 border-zinc-600'>
+      <div className=' w-screen overflow-hidden h-48 flex flex-row *:animate-bounce'>
         <div className='md:w-7 md:h-7 w-5 h-4 border-2 border-zinc-200 m-4'>
 
         </div>
@@ -24,7 +24,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className='bg-zinc-900 w-screen overflow-hidden h-48 flex flex-row *:animate-bounce'>
+      <div className=' w-screen overflow-hidden h-48 flex flex-row *:animate-bounce'>
         <div className='md:w-7 md:h-7 w-5 h-4 border-2 border-zinc-200 m-4'>
 
         </div>

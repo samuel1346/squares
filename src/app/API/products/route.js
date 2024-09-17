@@ -1,4 +1,4 @@
-import data from "@/app/data/data";
+
 import { NextResponse } from "next/server";
 import {collection, getDocs,doc, query} from "firebase/firestore"
 import db from "../../../../firebaseConfig";
@@ -6,10 +6,10 @@ import db from "../../../../firebaseConfig";
 export async function GET() {
   const squareCollection = collection(db, 'productos');
   const getSquares = await getDocs(squareCollection)
-  const squareArray = getSquares.docs.map((doc) => ({ ...doc.data() }))
+  const squareArray = getSquares.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
   
   try {
-    if (!data) {
+    if (!squareArray) {
       return NextResponse.json({ message: "No data found" }, { status: 404 });
     }
     return NextResponse.json(squareArray, { status: 200 });

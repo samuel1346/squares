@@ -1,4 +1,4 @@
-import data from "@/app/data/data";
+
 import { NextResponse } from "next/server";
 import {collection, getDocs,doc, query} from "firebase/firestore"
 import db from "../../../../../firebaseConfig";
@@ -7,8 +7,8 @@ export async function GET(req, { params }) {
   const { categories } = params; 
   const squareCollection = collection(db, 'productos');
   const getSquares = await getDocs(squareCollection)
-  const squareArray = getSquares.docs.map((doc) => ({ ...doc.data() }))
-  const Data = squareArray[0].data
+  const squareArray = getSquares.docs.map((doc) => ({ ...doc.data(), id:doc.id }))
+  const Data = squareArray
 console.log(Data)
   try {
     const filteredData = Data.filter(item => item.category === categories);
