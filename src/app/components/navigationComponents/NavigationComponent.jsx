@@ -4,7 +4,7 @@ import Link from 'next/link';
 const NavigationComponent = async () => {
     const uniqueCategories = await fetch("http://localhost:3000/API/products/categories", {
       cache: 'no-store',
-    }).then(r=>r.json())
+    }).then(r=>r.json()).catch(e=>console.log(e,'error'))
 
 
     return (
