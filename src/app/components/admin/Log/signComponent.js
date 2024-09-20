@@ -55,4 +55,6 @@ export const logOut = async()=>{
 }
 
 
-export default {creatAccount, logIn, logOut, googleSignIn}
+const authFunctions = { creatAccount, logIn, logOut, googleSignIn };
+
+export default authFunctions;

@@ -23,8 +23,8 @@ const ProductsComponent = async() => {
         </div>
     {
         Data?.map(i=>(
-        <div className='flex flex-col'>
-            <div key={i.id}
+        <div className='flex flex-col'  key={i.index}>
+            <div
             className='border-2 border-zinc-200/75 bg-zinc-900/50 justify-between flex md:flex-row flex-col mx-2'>
                 <div className=' flex flex-col md:flex-row *:m-2  *:text-zinc-200 '>
                     <div className='md:w-1/6'>

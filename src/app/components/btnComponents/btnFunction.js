@@ -1,5 +1,5 @@
-export const btnFunction = (state, useState)=>{
-    useState(!state)
+export const btnFunction = (state, setState)=>{
+    setState(!state)
 }
 
 export default btnFunction
