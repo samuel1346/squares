@@ -8,7 +8,7 @@ const ItemCategoryComponent = async ({params}) => {
   const square = <FontAwesomeIcon icon={faSquare} className='h-4 w-4 pt-1'/>
   const {category} = params;
 
-  const data = await fetch(`http://localhost:3000/API/products/${category}`, {
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products/${category}`, {
     
   }).then(r=>r.json()).catch(e=>console.log('error'))
   return (
