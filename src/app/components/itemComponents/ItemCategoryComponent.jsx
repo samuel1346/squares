@@ -9,7 +9,7 @@ const ItemCategoryComponent = async ({params}) => {
   const {category} = params;
 
   const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products/${category}`, {
-    
+    cache : 'no-store'
   }).then(r=>r.json()).catch(e=>console.log('error'))
   return (
     <div className="flex flex-wrap flex-row justify-center md:justify-start align-middle m-2">
