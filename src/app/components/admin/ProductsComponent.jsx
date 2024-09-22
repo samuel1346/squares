@@ -8,7 +8,7 @@ const ProductsComponent = async() => {
     const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products`,{
         cache : 'no-store'
         }).then(r=>r.json()).catch(e=>{
-        console.error('HTTP error! status: 404', e)
+        console.error('HTTP error!! status: 404', e)
         return []
         }
         );
