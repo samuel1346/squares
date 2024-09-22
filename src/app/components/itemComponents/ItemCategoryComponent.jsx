@@ -10,7 +10,10 @@ const ItemCategoryComponent = async ({params}) => {
 
   const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products/${category}`, {
     cache : 'no-store'
-  }).then(r=>r.json()).catch(e=>console.log('error'))
+  }).then(r=>r.json()).catch(e=>{
+    console.error('HTTP error! status: 404', e)
+    return []
+  })
   return (
     <div className="flex flex-wrap flex-row justify-center md:justify-start align-middle m-2">
       {data?.map((i) => (

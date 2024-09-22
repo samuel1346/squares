@@ -8,7 +8,10 @@ const ItemsComponents = async () => {
   const square = <FontAwesomeIcon icon={faSquare} className='h-4 w-4 pt-1'/>
   const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products`,{
     cache : 'no-store'
-  }).then(r=>r.json()).catch(e=>console.error('HTTP error! status: 404', e)
+  }).then(r=>r.json()).catch(e=>{
+    console.error('HTTP error! status: 404', e)
+    return []
+  }
   );
   console.log('api',process.env.NEXT_PUBLIC_API_URL, 'production', process.env.NODE_ENV)
   return (
