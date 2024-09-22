@@ -10,7 +10,7 @@ const ItemsComponents = async () => {
     cache : 'no-store'
   }).then(r=>r.json()).catch(e=>console.error('HTTP error! status: 404', e)
   );
-  console.log('api',process.env.NEXT_PUBLIC_API_URL)
+  console.log('api',process.env.NEXT_PUBLIC_API_URL, 'production', process.env.NODE_ENV)
   return (
     <div className="flex flex-wrap flex-row justify-center md:justify-start align-middle m-2">
       {data?.map((i) => (

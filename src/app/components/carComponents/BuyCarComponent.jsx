@@ -11,6 +11,7 @@ const BuyCarComponent = () => {
     const [ticket, setTicket] = useState([]);
     const [total, setTotal] = useState(0);
 
+    console.log('api',process.env.NEXT_PUBLIC_API_URL, 'production', process.env.NODE_ENV)
     const handleTicketDesciption = () => {
         const ticketDescription = car?.map(i => {
             return {
