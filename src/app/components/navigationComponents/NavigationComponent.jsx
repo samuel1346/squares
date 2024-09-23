@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+export const dynamic = "force-dynamic";
 
 const NavigationComponent = async () => {
-    const uniqueCategories = await fetch("http://localhost:3000/API/products/categories", {
-      cache: 'no-store',
+    const uniqueCategories = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products/categories`, {
+      next: { revalidate: 0 }
     }).then(r=>r.json()).catch(e=>console.log(e,'error'))
 
 

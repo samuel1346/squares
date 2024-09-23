@@ -7,8 +7,8 @@ export const dynamic = "force-dynamic";
 const ProductsComponent = async() => {
     const myApi = process.env.NODE_ENV === 'development'? 'http://localhost:3000': 'https://squares-blue.vercel.app';
     
-    const data = await fetch(`${myApi}/API/products`,{
-        cache : 'no-store'
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products`,{
+        next: { revalidate: 0 }
         }).then(r=>r.json()).catch(e=>{
         console.error('HTTP error!! status: 404', e)
         return []
