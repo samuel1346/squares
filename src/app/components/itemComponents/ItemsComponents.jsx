@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquare } from '@fortawesome/free-regular-svg-icons'
 
 const ItemsComponents = async () => {
+  const myApi = process.env.NODE_ENV === 'development'? 'http://localhost:3000': 'https://squares-blue.vercel.app';
   const square = <FontAwesomeIcon icon={faSquare} className='h-4 w-4 pt-1'/>
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products`,{
+  const data = await fetch(`${myApi}/API/products`,{
     cache : 'no-store'
   }).then(r=>r.json()).catch(e=>{
     console.error('HTTP error! status: 404', e)

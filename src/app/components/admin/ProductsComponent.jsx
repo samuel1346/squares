@@ -5,7 +5,9 @@ import DeleteComponent from './DeleteComponent';
 import EditComponent from './EditComponent';
 
 const ProductsComponent = async() => {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/API/products`,{
+    const myApi = process.env.NODE_ENV === 'development'? 'http://localhost:3000': 'https://squares-blue.vercel.app';
+    
+    const data = await fetch(`${myApi}/API/products`,{
         cache : 'no-store'
         }).then(r=>r.json()).catch(e=>{
         console.error('HTTP error!! status: 404', e)
