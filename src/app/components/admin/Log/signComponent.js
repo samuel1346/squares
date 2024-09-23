@@ -10,7 +10,7 @@ export const creatAccount = async (mail, password) => {
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
         console.log("El usuario ya tiene una cuenta, iniciando sesión...");
-        await logIn(mail, password);
+        alert('Error, email already in use')
       } else {
         console.error("Error al crear la cuenta:", error.message);
       }
@@ -35,8 +35,10 @@ export const logIn = async(mail,password)=>{
     console.log(errorCode, errorMessage)
     if (error.code === 'auth/invalid-credential') {
       console.log('Error: Contraseña incorrecta');
+      alert('Error: Contraseña/Email incorrecto')
     } else if (error.code === 'auth/invalid-email') {
       console.log('Error: Usuario no encontrado');
+      alert('Error: Usuario no encontrado')
     } else {
       console.log('Se produjo un error distinto al esperado');
     }
