@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DeleteComponent from './DeleteComponent';
 import EditComponent from './EditComponent';
-
+export const dynamic = "force-dynamic";
 const ProductsComponent = async() => {
     const myApi = process.env.NODE_ENV === 'development'? 'http://localhost:3000': 'https://squares-blue.vercel.app';
     

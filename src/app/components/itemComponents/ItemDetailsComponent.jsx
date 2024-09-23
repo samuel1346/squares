@@ -3,7 +3,7 @@ import Image from 'next/image'
 import AddToCarBtnComponent from '../btnComponents/AddToCarBtnComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquare } from '@fortawesome/free-regular-svg-icons'
-
+export const dynamic = "force-dynamic";
 const ItemDetailsComponent = async({params}) => {
   const myApi = process.env.NODE_ENV === 'development'? 'http://localhost:3000': 'https://squares-blue.vercel.app';
   

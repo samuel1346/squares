@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquare } from '@fortawesome/free-regular-svg-icons'
-
+export const dynamic = "force-dynamic";
 const ItemsComponents = async () => {
   const myApi = process.env.NODE_ENV === 'development'? 'http://localhost:3000': 'https://squares-blue.vercel.app';
   const square = <FontAwesomeIcon icon={faSquare} className='h-4 w-4 pt-1'/>
